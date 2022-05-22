@@ -1,6 +1,6 @@
 import { Request } from 'express';
 import { Controller, Get, Req } from '@nestjs/common';
-import { AppService } from './app.service';
+import { AppService } from './pseudo-app.service';
 
 /** Controller
  * Same meaning as MVC's Controller.
@@ -9,7 +9,7 @@ import { AppService } from './app.service';
 
 @Controller()
 // @Controller('/app') -> '/app', '/app/hello', ...
-export class AppController {
+export class PseudoAppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
